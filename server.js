@@ -5,12 +5,12 @@ var app = express()
 var db = require("./database.js")
 // Require md5 MODULE
 var md5 = require("md5")
-
+// Require cors 
 var cors = require("cors");
 // Make Express use its own built-in body parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+// Use cors
 app.use(cors());
 
 // Set server port
