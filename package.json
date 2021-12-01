@@ -2,7 +2,7 @@
   "name": "a99",
   "version": "1.0.0",
   "description": "An API to a user database.",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "client": "npx browser-sync start -sw",
     "server": "node server.js",
