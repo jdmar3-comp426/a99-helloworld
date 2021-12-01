@@ -1,9 +1,9 @@
 window.addEventListener( "load", function () {
-    function sendData() {
+    function signIn() {
       const XHR = new XMLHttpRequest();
   
       // Bind the FormData object and the form element
-      const FD = new URLSearchParams( new FormData( form ) );
+      const FD = new URLSearchParams( new FormData( signInForm ) );
   
       // Define what happens on successful data submission
       XHR.addEventListener( "load", function(event) {
@@ -21,14 +21,14 @@ window.addEventListener( "load", function () {
       // The data sent is what the user provided in the form
       XHR.send( FD );
     }
-  
+
     // Access the form element...
-    const form = document.getElementById( "signin-form" );
+    const signInForm = document.getElementById( "signin-form" );
   
     // ...and take over its submit event.
-    form.addEventListener( "submit", function ( event ) {
+    signInForm.addEventListener( "submit", function ( event ) {
       event.preventDefault();
   
-      sendData();
+      signIn();
     } );
   } );
