@@ -4,28 +4,140 @@ An express server with the following endpoints:
 
 ## GET /app
 
-Root endpoint
+---
+
+### Parameters
+
+No paraments.
+
+### Returns
+
+```
+{  
+    "message": string 
+}
+```
+
+---
 
 ## POST /app/new
 
-[asdfasdf]
+---
+
+### Parameters
+
+```
+{  
+    "user": string,
+    "pass": string 
+}
+```
+
+### Returns
+
+```
+{  
+    "message": string 
+}
+```
+
+---
 
 ## GET /app/users
 
-[asdfasdf]
+---
+
+### Parameters
+
+No parameters.
+
+### Returns
+
+```
+[{  
+    "id": int,
+    "user": string,
+    "pass": string 
+}]
+```
+
+---
 
 ## GET /app/user/:id
 
-[asdfasdf]
+---
+
+### Parameters
+
+`id: int`
+
+### Returns
+
+```
+{  
+    "id": int,
+    "user": string,
+    "pass": string 
+}
+```
+
+---
 
 ## PUT /app/update/user/:id
 
-[asdfasdf]
+---
+
+### Parameters
+
+`id: int`
+
+### Returns
+
+```
+{  
+    "message": string 
+}
+```
+
+---
 
 ## DELETE /app/delete/user/:id
 
-[asdfasdf] 
+---
+
+### Parameters
+
+`id: int`
+
+### Returns
+
+```
+{  
+    "message": string 
+}
+```
+
+---
 
 ## POST /app/login
 
-[asdfasdf]
+---
+
+### Parameters
+
+```
+{  
+    "user": string,
+    "pass": string 
+}
+```
+
+### Returns
+
+```
+[{  
+    "id": int,
+    "user": string,
+    "pass": string 
+}]
+```
