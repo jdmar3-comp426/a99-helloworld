@@ -98,6 +98,17 @@ app.post("/app/login", (req, res) => {
 	}
 })
 
+// UPDATE a single users cookie count at endpoint /app/update/user/:id
+app.patch("/app/update/cookie/:id", (req, res) => {
+	const stmt = db.prepare('UPDATE userinfo SET user = COALESCE(?,user), pass = COALESCE(?,pass), cookies = COALESCE(?, cookies) WHERE id = ?');
+	const info = stmt.run(null, null, req.body.cookies, req.params.id);
+	if(info.changes === 1) {
+		res.status(200).json({"message":"1 record updated: ID " + req.body.cookies + " (200)"})
+	} else {
+		res.status(404).json({"message":"User does not exist. (404)"})
+	}
+});
+
 // Default response for any other request
 app.use(function(req, res){
 	res.json({"message":"Endpoint not found. (404)"});
