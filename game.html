@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <title>Game</title>
     </head>
     <body>
@@ -12,10 +13,13 @@
         <button id="startButton" onclick="start()">Start</button>
         <button id="ResetButton" onclick="gameOver()">Stop</button>
 
-        <div id = "cookie" onclick="cookieClick()">
+        <div id = "cookie" onclick="cookieClick(1)">
             <img src="cookie.jpeg" width="200px"/>
         </div>
-        <p>Number of Clicks:</p>
+        <div style="color:blueviolet;" onclick="buyClicker()">Buy AutoClicker for 25 Cookies</div>
+        <br>
+        AutoClicker Count: <span id="clickers" style="color: blueviolet;">0</span>
+        <p>Cookies:</p>
         <div id = "numbers"></div>
 
         <p>Intructions: Click as Many as you want until tired. Lets see if you can hit a million clicks</p>
