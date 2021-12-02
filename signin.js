@@ -4,12 +4,7 @@ window.addEventListener( "load", function () {
   
       // Bind the FormData object and the form element
       const FD = new URLSearchParams( new FormData( signInForm ) );
-  
-      // Define what happens on successful data submission
-      XHR.addEventListener( "load", function(event) {
-        alert( event.target.responseText );
-      } );
-  
+
       // Define what happens in case of error
       XHR.addEventListener( "error", function( event ) {
         alert( 'Oops! Something went wrong.' );
@@ -17,7 +12,18 @@ window.addEventListener( "load", function () {
   
       // Set up our request
       XHR.open( "POST", "http://localhost:5000/app/login" );
-  
+      
+      //load id to localStorage on successful login
+      XHR.onload  = function() {
+        if(XHR.status == 200){
+          var jsonResponse = XHR.response;
+          var account = JSON.parse(jsonResponse)
+          localStorage.setItem('id', account.id)
+        } else {
+          alert("Invalid Login")
+        }
+      };
+
       // The data sent is what the user provided in the form
       XHR.send( FD );
     }
