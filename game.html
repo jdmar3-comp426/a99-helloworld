@@ -7,10 +7,11 @@
     </head>
     <body>
         <h1>WELCOME TO THE HELLOWORLD COOKIE CLICK GAME</h1>
-        <h2>Please press the start button to play. Press the Stop button if Tired.</h2>
+        <h2>Please press the start button to play. Press the Stop button to save and reset game. Press load to load in previous saved game.</h2>
         <h2>After Each Stop, progress will be saved.</h2>
         <button id="startButton" onclick="start()">Start</button>
-        <button id="ResetButton" onclick="gameOver()">Stop</button>
+        <button id="ResetButton">Stop</button>
+        <button id="loadButton" onclick="load()">Load</button>
 
         <div id = "cookie" onclick="cookieClick()">
             <img src="cookie.jpeg" width="200px"/>
