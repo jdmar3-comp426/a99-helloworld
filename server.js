@@ -35,8 +35,8 @@ app.get("/app/", (req, res, next) => {
 // Define other CRUD API endpoints using express.js and better-sqlite3
 // CREATE a new user (HTTP method POST) at endpoint /app/new/
 app.post("/app/new", (req, res) => {
-	const stmt = db.prepare('INSERT INTO userinfo (user, pass) VALUES (?, ?)');
-	const info = stmt.run(req.body.user, md5(req.body.pass));
+	const stmt = db.prepare('INSERT INTO userinfo (user, pass, cookies, clickers) VALUES (?, ?, ?, ?)');
+	const info = stmt.run(req.body.user, md5(req.body.pass), 0, 0);
 	if(info.changes === 1) {
 		res.status(201).json({"message":"1 record created: ID " + info.lastInsertRowid + " (201)"})
 	} else {
@@ -100,8 +100,8 @@ app.post("/app/login", (req, res) => {
 
 // UPDATE a single users cookie count at endpoint /app/update/user/:id
 app.patch("/app/update/cookie/:id", (req, res) => {
-	const stmt = db.prepare('UPDATE userinfo SET user = COALESCE(?,user), pass = COALESCE(?,pass), cookies = COALESCE(?, cookies) WHERE id = ?');
-	const info = stmt.run(null, null, req.body.cookies, req.params.id);
+	const stmt = db.prepare('UPDATE userinfo SET user = COALESCE(?,user), pass = COALESCE(?,pass), cookies = COALESCE(?, cookies), clickers = COALESCE(?, clickers) WHERE id = ?');
+	const info = stmt.run(null, null, req.body.cookies, req.body.clickers, req.params.id);
 	if(info.changes === 1) {
 		res.status(200).json({"message":"1 record updated: ID " + req.body.cookies + " (200)"})
 	} else {

@@ -4,6 +4,8 @@ window.addEventListener("load", function () {
 
         // Bind the FormData object and the form element
         const FD = new URLSearchParams(new FormData(createForm));
+        FD.append('cookies',0)
+        FD.append('clickers', 0)
 
         // Define what happens on successful data submission
         XHR.addEventListener("load", function (event) {
