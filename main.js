@@ -1,6 +1,5 @@
 var cookies = 0;
 var cursors = 0;
-var prestige = 0;
 
 
 function cookieClick(number){
@@ -28,7 +27,6 @@ function save() {
     var save = {
         cookies: cookies,
         cursors: cursors,
-        prestige: prestige
     }
     localStorage.setItem("save",JSON.stringify(save)); 
 }
@@ -37,5 +35,6 @@ function load() {
     var savegame = JSON.parse(localStorage.getItem("save")); 
     if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies; 
     if (typeof savegame.cursors !== "undefined") cursors = savegame.cursors; 
-    if (typeof savegame.prestige !== "undefined") prestige = savegame.prestige; 
+    document.getElementById('cursors').innerHTML = cursors;  //updates the number of cursors for the user
+    document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
 }
