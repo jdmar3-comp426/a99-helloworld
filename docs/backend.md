@@ -141,3 +141,24 @@ No parameters.
     "pass": string 
 }]
 ```
+
+## PATCH /app/update/cookie/:id
+
+---
+
+### Parameters
+
+```
+{  
+    "cookies" : int,
+    "clickers": int
+}
+```
+
+### Returns
+
+```
+{
+    "message": string
+}
+```
