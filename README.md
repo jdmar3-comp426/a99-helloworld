@@ -2,7 +2,7 @@
 
 # Cookie Clicker Game
 
-Helloworld's cookie clicker game is a simple incremental clicker game that mainly uses a Bootstrap framework for the frontend and and Express server for the backend. Click the cookie and use those clicks to buy auto clickers for increased efficiency. The current goal of the game is to reach 1 million clicks.
+Helloworld's cookie clicker game is a simple incremental clicker game that mainly uses a Bootstrap framework for the frontend and and Express server for the backend. The website also uses better-sqlite3 to store and manage the users' accounts and game data. Click the cookie and use those clicks to buy auto clickers for increased efficiency. The current goal of the game is to reach 1 million clicks.
 
 ## Authors & Roles
 
