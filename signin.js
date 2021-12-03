@@ -19,7 +19,7 @@ window.addEventListener( "load", function () {
           var jsonResponse = XHR.response;
           var account = JSON.parse(jsonResponse)
           localStorage.setItem('id', account.id)
-          window.location.href = './game.html'
+          window.location.replace('./game.html')
         } else {
           alert("Invalid Login")
         }

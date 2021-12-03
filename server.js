@@ -103,7 +103,7 @@ app.patch("/app/update/cookie/:id", (req, res) => {
 	const stmt = db.prepare('UPDATE userinfo SET user = COALESCE(?,user), pass = COALESCE(?,pass), cookies = COALESCE(?, cookies), clickers = COALESCE(?, clickers) WHERE id = ?');
 	const info = stmt.run(null, null, req.body.cookies, req.body.clickers, req.params.id);
 	if(info.changes === 1) {
-		res.status(200).json({"message":"1 record updated: ID " + req.body.cookies + " (200)"})
+		res.status(200).json({"message":"1 record updated: Cookies " + req.body.cookies + " (200)"})
 	} else {
 		res.status(404).json({"message":"User does not exist. (404)"})
 	}
