@@ -38,5 +38,6 @@ To start the webpage and server run:
 
 ## Playthrough/Clickthrough
 
-[images]  
-[captions]
+https://user-images.githubusercontent.com/58484462/144684445-9c5a2e6f-7a8f-4c5d-bba5-b3b251f55817.mp4
+
+
