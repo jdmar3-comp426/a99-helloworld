@@ -13,7 +13,7 @@
   "author": "",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "better-sqlite3": "^7.4.4",
+    "better-sqlite3": "^7.4.5",
     "browser-sync": "^2.27.7",
     "concurrently": "^6.4.0",
     "cors": "^2.8.5",
