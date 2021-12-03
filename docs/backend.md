@@ -139,13 +139,13 @@ No parameters.
 ### Returns
 
 ```
-[{  
+{  
     "id": int,
     "user": string,
     "pass": string,
     "cookies" : int,
     "clickers": int
-}]
+}
 ```
 
 ## PATCH /app/update/cookie/:id
