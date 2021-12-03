@@ -24,9 +24,9 @@ Set up the npm package by running in terminal:
 
 `npm init`
 
-Install browser-sync, better-sqllite3, md5, express, and concurrently by running:
+Install browser-sync, better-sqllite3, md5, express, concurrently, cors, dom, timer by running:
 
-`npm install browser-sync better-sqlite3 express md5 concurrently`
+`npm install browser-sync better-sqlite3 express md5 concurrently cors dom timer`
 
 To start the webpage and server run:
 
