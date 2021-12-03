@@ -12,6 +12,26 @@ Helloworld's cookie clicker game is a simple incremental clicker game that mainl
 - Jeffrey Yang: Backend
 - Miles Hassell: Frontend
 
+## Installation and Setup Guide
+
+Requirements: Node.Js, Git (preferred)
+
+Download the repository by cloning or downloading the zip
+
+Once in project directory
+
+Set up the npm package by running in terminal: 
+
+`npm init`
+
+Install browser-sync, better-sqllite3, md5, express, and concurrently by running:
+
+`npm install browser-sync better-sqlite3 express md5 concurrently`
+
+To start the webpage and server run:
+
+`npm run start`
+
 ## Playthrough/Clickthrough
 
 [images]  
