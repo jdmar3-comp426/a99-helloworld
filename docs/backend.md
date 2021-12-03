@@ -57,7 +57,9 @@ No parameters.
 [{  
     "id": int,
     "user": string,
-    "pass": string 
+    "pass": string,
+    "cookies" : int,
+    "clickers": int
 }]
 ```
 
@@ -77,7 +79,9 @@ No parameters.
 {  
     "id": int,
     "user": string,
-    "pass": string 
+    "pass": string,
+    "cookies" : int,
+    "clickers": int
 }
 ```
 
@@ -138,7 +142,9 @@ No parameters.
 [{  
     "id": int,
     "user": string,
-    "pass": string 
+    "pass": string,
+    "cookies" : int,
+    "clickers": int
 }]
 ```
 
