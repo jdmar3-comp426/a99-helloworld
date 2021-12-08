@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Game</title>
+    </head>
+    <style>
+        body {
+            background-color: #7BAFD4;
+        }
+    </style>
+    <body>
+        <h1>WELCOME TO THE HELLOWORLD COOKIE CLICK GAME</h1>
+        <h2>Please press the "Start" button to play. Press the "Save/Stop" button to save and reset game. Press "Load" to load in previous saved game.</h2>
+        <h2>After each stop, progress will be saved.</h2>
+        <button id="startButton" onclick="start()">Start</button>
+        <button id="ResetButton">Save/Stop</button>
+        <button id="loadButton" onclick="load()">Load</button>
+
+        <div id = "cookie" onclick="cookieClick(1)">
+            <img src="cookie.jpeg" width="200px"/>
+        </div>
+        <div style="color:blueviolet;" onclick="buyClicker()">Buy AutoClicker for 25 Cookies</div>
+        <br>
+        AutoClicker Count: <span id="clickers" style="color: blueviolet;">0</span>
+        <p>Cookies:</p>
+        <div id = "numbers"></div>
+
+        <p>Intructions: Click as Many as you want until tired. Lets see if you can hit a million clicks</p>
+        <div id="status"></div>
+        <div id="reset"></div>
+
+        <h4>Log out
+            <a href="index.html">here</a>
+        </h4>
+
+        <script src="game.js"></script>
+    </body>
+</html>
